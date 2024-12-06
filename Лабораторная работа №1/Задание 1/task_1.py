@@ -21,7 +21,7 @@ class GameMetric:
         self.score = score
         self.level = level
 
-    def update_score(self, points: int == 0) -> str:
+    def update_score(self, points: int = 0) -> str:
         """
         Обновление очков игрока.
 
