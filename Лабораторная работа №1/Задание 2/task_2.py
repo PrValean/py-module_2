@@ -1,6 +1,5 @@
 from task_1 import GameMetric, Truck, Book
 
-
 if __name__ == "__main__":
     player = GameMetric("Alice", 100, 10)
     truck = Truck("Volvo FH", 2020, 20)
