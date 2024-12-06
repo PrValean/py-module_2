@@ -8,4 +8,4 @@ jobs:
     - uses: actions/checkout@v4
     - run: pip install black
     - name: PEP8 Check
-      run:  (IFS=$'\n'; for x in `find . -regextype posix-egrep -iregex "\./*.*(((лаб|lab)[^0-9]*[1-4])|([1-4][^0-9]*(лаб|lab))).*/.*\.py"` ; do IFS=$'\n' black --check -l120 --skip-string-normalization $x; done
+      run: IFS=$'\n'; for x in `find . -regextype posix-egrep -iregex "\./*.*(((лаб|lab)[^0-9]*[1-4])|([1-4][^0-9]*(лаб|lab))).*/.*\.py"`; do black --check -l120 --skip-string-normalization "$x"; done
