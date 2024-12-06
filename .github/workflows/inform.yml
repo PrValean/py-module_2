@@ -1,0 +1,18 @@
+on:
+  pull_request
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    name: Проверка форматирования на соответствие PEP8
+    steps:
+    - uses: actions/checkout@v4
+    - run: pip install black
+    - name: PEP8 Check
+      run: |
+        IFS=$'\n'
+        find . -regextype posix-egrep -iregex "\./.*(((лаб|lab)[^0-9]*[1-4])|([1-4][^0-9]*(лаб|lab))).*/.*\.py" -print0 | while IFS= read -r -d '' x; do
+          if ! black --check --diff -l 120 --skip-string-normalization "$x"; then
+            echo "Форматирование файла $x не соответствует стандартам."
+            exit 1
+          fi
+        done
