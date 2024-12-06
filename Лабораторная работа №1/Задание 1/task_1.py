@@ -39,14 +39,13 @@ class GameMetric:
         """
         Повышение уровня игрока.
 
-        :return: Сообщение о повышении уровня или об ошибке
+        :return: Сообщение о повышении лвл или об ошибке
         """
         if self.level < 80:
             self.level += 1
             return f'Поздравляем, {self.player_name}! Вы апнулись до {self.level}.'
         else:
-            return (f'{self.player_name}, вы уже на макс уровне (80), '
-                    'пора в ЦЛК, хватит сидеть в Вайтране!')
+            return f'{self.player_name}, вы уже на макс уровне (80), пора в ЦЛК, хватит сидеть в Вайтране!'
 
 
 class Truck:
@@ -94,8 +93,7 @@ class Truck:
             raise ValueError("Дополнительная грузоподъемность должна быть положительной.")
 
         self.capacity += additional_capacity
-        return (f'Грузоподъемность грузовика {self.model} '
-                f'обновлена до {self.capacity} тонн.')
+        return f'Грузоподъемность грузовика {self.model} обновлена до {self.capacity} тонн.'
 
 
 class Book:
@@ -117,7 +115,7 @@ class Book:
 
     def read(self, pages_read: int) -> str:
         """
-        Количество страниц, которые надо еще прочитать.
+        Кол-во страниц, которые надо еще прочитать.
 
         :param pages_read: Количество страниц уже прочитанных (должно быть положительным числом)
         :return: Сообщение о том, сколько страниц осталось
@@ -125,14 +123,13 @@ class Book:
         if pages_read <= 0:
             raise ValueError("Количество страниц для чтения должно быть положительным числом.")
         if pages_read > self.pages:
-            raise ValueError("Количество прочитанных страниц больше, чем самих страниц книги.")
-        
+            raise ValueError("Количество прочитанных страниц больше, чем самих страниц книги")
         unread_pages = self.pages - pages_read
         return f'Вам осталось прочитать {unread_pages}'
 
     def show_author(self) -> str:
         """
-        Возвращает читателю имя автора.
+        Возвращает читателю имя автора
 
         :return: self.author
         >>> book = Book("1984", "George Orwell", 328)
