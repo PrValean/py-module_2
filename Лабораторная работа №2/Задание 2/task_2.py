@@ -53,5 +53,4 @@ if __name__ == '__main__':
     ]
     library_with_books = Library(books=list_books)  # инициализируем библиотеку с книгами
     print(library_with_books.get_next_book_id())  # проверяем следующий id для непустой библиотеки
-
     print(library_with_books.get_index_by_book_id(1))  # проверяем индекс книги с id = 1
