@@ -72,14 +72,14 @@ class DeathKnight(ScourgeCharacter):
             return f"Недостаточно рун"
 
     def __str__(self) -> str:
-        """Возвращает строковое представление рыцаря с учетом рун"""
+        """Возвращает строковое представление рыцаря с учетом рун."""
         base_str = super().__str__()
         return f"{base_str}, Руны: {self.runic_power}"
 
     def __repr__(self) -> str:
-        """Возвращает неформальное строковое представление рыцаря с учетом рун"""
-    return (
-        f"DeathKnight(name={self.name}, level={self.level}, "
-        f"health={self.health}, reagents={self.reagents}, "
-        f"quests={self.quests}, runic_power={self.runic_power})"
-    )
+        """Возвращает неформальное строковое представление рыцаря с учетом рун."""
+        return (
+            f"DeathKnight(name={self.name}, level={self.level}, "
+            f"health={self.health}, reagents={self.reagents}, "
+            f"quests={self.quests}, runic_power={self.runic_power})"
+        )
