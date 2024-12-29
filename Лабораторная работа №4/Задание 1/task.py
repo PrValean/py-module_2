@@ -9,7 +9,7 @@ class ScourgeCharacter:
         reagents (int): Кол-во реагентов
         quests (list): Список квестов, выполненных персонажем
     """
-
+    
     def __init__(self, name: str, level: int, health: int, reagents: int) -> None:
         self.name = name
         self.level = level
