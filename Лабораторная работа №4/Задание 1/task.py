@@ -78,7 +78,6 @@ class DeathKnight(ScourgeCharacter):
 
     def __repr__(self) -> str:
         """Возвращает неформальное строковое представление рыцаря с учетом рун"""
-        base_str = super().__str__()
     return (
         f"DeathKnight(name={self.name}, level={self.level}, "
         f"health={self.health}, reagents={self.reagents}, "
