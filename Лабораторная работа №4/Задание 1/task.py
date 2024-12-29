@@ -80,4 +80,3 @@ class DeathKnight(ScourgeCharacter):
         """Возвращает неформальное строковое представление рыцаря с учетом рун"""
         base_str = super().__str__()
         return f"ScourgeCharacter({base_str}, runic_power={self.runic_power})"
-        
