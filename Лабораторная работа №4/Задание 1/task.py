@@ -28,19 +28,19 @@ class ScourgeCharacter:
 
     def __str__(self) -> str:
         """Возвращает строковое представление персонажа"""
-+        return (
-+            f"Персонаж: {self.name}, Уровень: {self.level}, "
-+            f"Здоровье: {self.health}, Кол-во реагентов: {self.reagents}, "
-             f"Выполненные квесты: {self.quests}"
-+        )
+        return (
+            f"Персонаж: {self.name}, Уровень: {self.level}, "
+            f"Здоровье: {self.health}, Кол-во реагентов: {self.reagents}, "
+            f"Выполненные квесты: {self.quests}"
+        )
 
     def __repr__(self) -> str:
         """Возвращает неформальное строковое представление персонажа"""
-+        return (
-+            f"ScourgeCharacter(name={self.name}, level={self.level}, "
-+            f"health={self.health}, reagents={self.health}, "
-             f"quests={self.quests})"
-+        )
+        return (
+            f"ScourgeCharacter(name={self.name}, level={self.level}, "
+            f"health={self.health}, reagents={self.reagents}, "
+            f"quests={self.quests})"
+        )
 
 
 class DeathKnight(ScourgeCharacter):
