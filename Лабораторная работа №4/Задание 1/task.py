@@ -41,7 +41,7 @@ class ScourgeCharacter:
             f"health={self.health}, reagents={self.reagents}, "
             f"quests={self.quests})"
         )
-
+        
 
 class DeathKnight(ScourgeCharacter):
     """
